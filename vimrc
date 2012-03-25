@@ -61,7 +61,7 @@ let mapleader=","
 nmap <silent> ,wa :1,9000bwipeout<cr>
 
 nmap <silent> ,cd :lcd %:h<cr>
-nmap <silent> ,md :mkdir -p %:p:h<cr>
+nmap <silent> ,md :!mkdir -p %:p:h<cr>
 
 nmap <silent> ,n :nohls<cr>
 
@@ -70,7 +70,7 @@ nmap <silent> ,ww :set invwrap<cr>:set wrap?<cr>
 nmap <silent> ,ev :e $MYVIMRC<cr>
 nmap <silent> ,sv :so $MYVIMRC<cr>
 
-nmap <silent> ,bd :BD<cr>
+nmap <silent> ,bd :bd<cr>
 
 nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
