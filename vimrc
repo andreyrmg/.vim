@@ -94,3 +94,7 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+if has("win32")
+  set fencs="cp1251,utf-8"
+endif
