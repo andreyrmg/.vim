@@ -88,3 +88,4 @@ colorscheme wombat256mod
 
 set nobackup
 set nowritebackup
+set noswapfile
