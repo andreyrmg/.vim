@@ -98,3 +98,8 @@ highlight lCursor guifg=NONE guibg=Cyan
 if has("win32")
   set fencs="cp1251,utf-8"
 endif
+
+" Hg
+if has("win32")
+  autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=79
+endif
