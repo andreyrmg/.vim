@@ -97,6 +97,8 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 if has("win32")
   set fencs="cp1251,utf-8"
+  set iskeyword=@,a-z,A-Z,48-57,_,128-175,192-255
+  set isident=@,48-57,_,192-255
 endif
 
 " Hg
