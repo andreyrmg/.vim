@@ -1,4 +1,3 @@
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -45,8 +44,6 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 set virtualedit=all
 
 set wildmenu
-
-set diffopt+=iwhite
 
 set hlsearch
 
@@ -105,3 +102,4 @@ endif
 if has("win32")
   autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=79
 endif
+
