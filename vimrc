@@ -100,6 +100,10 @@ if has("win32")
   set isident=@,48-57,_,192-255
 endif
 
+if has("autocmd")
+  autocmd FileType go setl ts=4 sts=4 sw=4 et
+endif
+
 " Hg
 if has("win32")
   autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=79
