@@ -92,13 +92,11 @@ set noswapfile
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
+
+set isfname+=(,)
 
 if has("win32")
-  set fencs="cp1251,utf-8"
-  set iskeyword=@,a-z,A-Z,48-57,_,128-175,192-255
-  set isident=@,48-57,_,192-255
-
+  set fencs=utf-8,cp1251,cp866
   language ctype Russian_Russia.1251
 endif
 
