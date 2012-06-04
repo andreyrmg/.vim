@@ -103,6 +103,7 @@ endif
 if has("autocmd")
   autocmd FileType go setl ts=4 sts=4 sw=4 et
   autocmd FileType python setl ts=4 sts=4 sw=4 et
+  autocmd FileType xml setl ts=4 sts=4 sw=4 et
 endif
 
 " Hg
