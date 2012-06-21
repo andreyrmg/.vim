@@ -1,3 +1,5 @@
+set nocompatible
+
 call pathogen#infect()
 
 filetype on
@@ -21,7 +23,7 @@ set backspace=2
 
 set hidden
 
-set cpoptions=ces$
+set cpoptions=Bces$
 
 set stl=%f\ %m\ %r%\{fugitive#statusline()}\ Line:%l/%L\ [%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
 
