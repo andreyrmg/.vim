@@ -85,7 +85,7 @@ set nocursorcolumn
 set nu
 
 set t_Co=256
-colorscheme wombat256mod
+colorscheme vwilight
 
 set nobackup
 set nowritebackup
