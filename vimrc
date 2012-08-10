@@ -114,6 +114,11 @@ if has("win32")
   autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=79
 endif
 
+" Fast save
+nmap <f2> :w<cr>
+imap <f2> <esc>:w<cr>
+vmap <f2> <esc>:w<cr>
+
 " NERD Tree
 nmap <f3> :NERDTreeToggle<cr>
 imap <f3> <esc>:NERDTreeToggle<cr>
