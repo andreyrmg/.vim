@@ -3,7 +3,7 @@ set guioptions-=m
 set guioptions+=c
 
 set lines=50
-set columns=150
+set columns=161
 
 if has("win32")
   set guifont=Consolas:h10:cDEFAULT
