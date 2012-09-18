@@ -55,7 +55,7 @@ set incsearch
 
 set ignorecase
 
-set clipboard+=unnamed
+"set clipboard+=unnamed
 
 set autoread
 
@@ -85,7 +85,7 @@ set nocursorcolumn
 set nu
 
 set t_Co=256
-colorscheme vwilight
+colorscheme wombat256mod
 
 set nobackup
 set nowritebackup
