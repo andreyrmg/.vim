@@ -97,9 +97,11 @@ set imsearch=0
 
 set isfname+=(,)
 
+set encoding=utf-8
+
 if has("win32")
   set backupcopy=yes
-  set fencs=utf-8,cp1251
+  set fencs+=cp1251
   language ctype Russian_Russia.1251
 endif
 
