@@ -16,4 +16,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.dsk	 setf dosini
   " Delphi .BPG = Makefile
   au BufNewFile,BufRead *.bpg	 setf make|setlocal makeprg=make\ -f\ %
+
+  " Gradle build script
+  au BufNewFile,BufRead *.gradle setf groovy
 augroup END
