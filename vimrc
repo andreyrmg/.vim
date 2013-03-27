@@ -77,6 +77,9 @@ nmap <silent> ,bd :bd<cr>
 
 nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
+nmap <leader>j :bprev<cr>
+nmap <leader>k :bnext<cr>
+
 set synmaxcol=2048
 
 set nocursorline
