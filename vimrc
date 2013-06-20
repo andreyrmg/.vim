@@ -113,6 +113,7 @@ if has("autocmd")
   autocmd FileType python setl ts=4 sts=4 sw=4 et
   autocmd FileType xml setl ts=4 sts=4 sw=4 et
   autocmd FileType javascript setl ts=4 sts=4 sw=4 et
+  autocmd FileType groovy setl ts=4 sts=4 sw=4 et
 endif
 
 " Hg
