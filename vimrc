@@ -25,7 +25,7 @@ set hidden
 
 set cpoptions=Bces$
 
-set stl=%f\ %m\ %r%\{fugitive#statusline()}\ Line:%l/%L\ [%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
+set stl=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
 
 set laststatus=2
 
