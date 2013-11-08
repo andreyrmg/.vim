@@ -126,8 +126,3 @@ nmap <f2> :w<cr>
 imap <f2> <esc>:w<cr>
 vmap <f2> <esc>:w<cr>
 
-" NERD Tree
-nmap <f3> :NERDTreeToggle<cr>
-imap <f3> <esc>:NERDTreeToggle<cr>
-vmap <f3> <esc>:NERDTreeToggle<cr>
-
