@@ -10,9 +10,9 @@ if has("win32")
 else
   let s:uname = system("uname -s")
   if s:uname == "Darwin\n"
-    set lines=36
-    set columns=125
-    set guifont=Menlo:h16
+    set lines=55
+    set columns=156
+    set guifont=Menlo:h14
   else
     set guifont=Ubuntu\ Mono\ 11
   endif
