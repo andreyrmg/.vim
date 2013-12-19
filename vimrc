@@ -1,6 +1,15 @@
 set nocompatible
+filetype off
 
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 filetype on
 filetype plugin on
@@ -49,11 +58,14 @@ set virtualedit=all
 
 set wildmenu
 
+" search options
+"
+set gdefault
 set hlsearch
-
-set incsearch
-
 set ignorecase
+set smartcase
+set incsearch
+nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
 "set clipboard+=unnamed
 
