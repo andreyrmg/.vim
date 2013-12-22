@@ -13,8 +13,6 @@ else
     set lines=55
     set columns=156
     set guifont=Menlo:h14
-  else
-    set guifont=Ubuntu\ Mono\ 11
   endif
 endif
 
