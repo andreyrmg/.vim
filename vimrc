@@ -34,7 +34,7 @@ set hidden
 
 set cpoptions=Bces$
 
-set stl=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
+set stl=%f\ %M%R\ %l:%v/%L\ %y\ [0x%B]
 
 set laststatus=2
 
