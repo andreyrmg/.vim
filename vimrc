@@ -142,6 +142,7 @@ vmap <f2> <esc>:w<cr>
 " CtrlP
 let g:ctrlp_by_filename = 1
 let g:ctrlp_match_window = 'bottom,order:bbt,min:1,max:10,results:100'
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svn)$'
   \ }
