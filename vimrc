@@ -125,6 +125,7 @@ if has("autocmd")
   autocmd FileType go setl ts=4 sts=4 sw=4 et
   autocmd FileType python setl ts=4 sts=4 sw=4 et
   autocmd FileType xml setl ts=4 sts=4 sw=4 et
+  autocmd FileType java setl ts=4 sts=4 sw=4 et
   autocmd FileType javascript setl ts=4 sts=4 sw=4 et
   autocmd FileType groovy setl ts=4 sts=4 sw=4 et
 endif
@@ -144,13 +145,11 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_match_window = 'bottom,order:bbt,min:1,max:10,results:100'
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/]\.(git|hg|svn)$'
-  \ }
-let g:ctrlp_custom_ignore = {
-  \ 'file': '\v(\.(class|jar)$'
-  \ }
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.cache|\.history|\.lib|dist|target|lib_managed|src_managed|project\/boot|project\/plugins\/project)$'
+  \ 'file': '\v(\.(class|jar))$',
+  \ 'dir': '\v[\/](' .
+  \        '\.git|\.hg|\.svn' . '|' .
+  \        '\.cache|\.history|\.lib|dist|target|lib_managed|src_managed|project[\/]boot|project[\/]plugins[\/]project' . '|' .
+  \        ')$'
   \ }
 let g:ctrlp_open_new_file = 'r'
 
