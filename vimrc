@@ -1,5 +1,9 @@
 set nocompatible
-filetype off
+
+if exists("did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -12,9 +16,14 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'kien/ctrlp.vim'
 
-filetype on
-filetype plugin on
-filetype indent on
+let s:goroot = system("go env GOROOT")
+if !v:shell_error
+  let g:goroot = substitute(s:goroot, "\n$", "", "")
+  let &rtp = &rtp . ',' . g:goroot . "/misc/vim"
+endif
+
+filetype plugin indent on
+syntax on
 
 set tabstop=2
 set shiftwidth=2
@@ -123,6 +132,11 @@ endif
 
 if has("autocmd")
   autocmd FileType go setl ts=4 sts=4 sw=4 et
+  if exists("g:goroot")
+    autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    autocmd FileType go compiler go
+  endif
+  
   autocmd FileType python setl ts=4 sts=4 sw=4 et
   autocmd FileType xml setl ts=4 sts=4 sw=4 et
   autocmd FileType java setl ts=4 sts=4 sw=4 et
