@@ -81,6 +81,8 @@ nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
 set autoread
 
+set nowrap
+
 let mapleader=","
 
 nmap <silent> ,wa :1,9000bwipeout<cr>
@@ -101,6 +103,11 @@ nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
 nmap <leader>j :bprev<cr>
 nmap <leader>k :bnext<cr>
+
+nnoremap <M-Up> :resize -5<cr>
+nnoremap <M-Down> :resize +5<cr>
+nnoremap <M-Left> :vertical resize -5<cr>
+nnoremap <M-Right> :vertical resize +5<cr>
 
 set synmaxcol=2048
 
