@@ -80,6 +80,7 @@ nnoremap <silent> <cr> :nohlsearch<cr><cr>
 "set clipboard+=unnamed
 
 set autoread
+set autowrite
 
 set nowrap
 
