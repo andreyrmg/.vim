@@ -15,6 +15,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'kien/ctrlp.vim'
+Bundle 'derekwyatt/vim-scala'
 
 let s:goroot = system("go env GOROOT")
 if !v:shell_error
