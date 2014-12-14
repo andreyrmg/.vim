@@ -8,14 +8,18 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
+
 Plugin 'derekwyatt/vim-scala'
+
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
 
 call vundle#end()
 
