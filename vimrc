@@ -75,7 +75,6 @@ set virtualedit=all
 set wildmenu
 
 " search options
-"
 set gdefault
 set hlsearch
 set ignorecase
@@ -115,6 +114,9 @@ nnoremap <M-Up> :resize -5<cr>
 nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
+
+nmap <leader>l set list!<cr>
+set listchars=tab:▸\ 
 
 set synmaxcol=2048
 
