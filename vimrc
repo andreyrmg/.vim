@@ -213,3 +213,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_open_new_file = 'r'
 
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
