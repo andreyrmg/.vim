@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 
 Plugin 'derekwyatt/vim-scala'
 
