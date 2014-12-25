@@ -11,11 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'wincent/command-t'
-
-Plugin 'derekwyatt/vim-scala'
-
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
