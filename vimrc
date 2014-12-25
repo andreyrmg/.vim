@@ -196,16 +196,3 @@ endif
 nmap <f2> :w<cr>
 imap <f2> <esc>:w<cr>
 vmap <f2> <esc>:w<cr>
-
-" CtrlP
-let g:ctrlp_by_filename = 1
-let g:ctrlp_match_window = 'bottom,order:bbt,min:1,max:10,results:100'
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = {
-  \ 'file': '\v(\.(class|jar))$',
-  \ 'dir': '\v[\/](' .
-  \        '\.git|\.hg|\.svn' . '|' .
-  \        '\.cache|\.history|\.lib|dist|target|lib_managed|src_managed|project[\/]boot|project[\/]plugins[\/]project' . '|' .
-  \        ')$'
-  \ }
-let g:ctrlp_open_new_file = 'r'
