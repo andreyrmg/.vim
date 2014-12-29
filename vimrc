@@ -139,7 +139,7 @@ nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
 
 nmap <leader>l set list!<cr>
-set listchars=tab:▸\ 
+set listchars=tab:→\ 
 
 set synmaxcol=2048
 
