@@ -15,12 +15,6 @@ Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
-let s:goroot = system("go env GOROOT")
-if !v:shell_error
-  let g:goroot = substitute(s:goroot, "\n$", "", "")
-  let &rtp = &rtp . ',' . g:goroot . "/misc/vim"
-endif
-
 filetype plugin indent on
 syntax on
 
@@ -175,12 +169,6 @@ if has("autocmd")
         \   exe "normal! g`\"" |
         \ endif
 
-  autocmd FileType go setl ts=4 sts=4 sw=4 et
-  if exists("g:goroot")
-    autocmd FileType go autocmd BufWritePre <buffer> Fmt
-    autocmd FileType go compiler go
-  endif
-  
   autocmd FileType python setl ts=4 sts=4 sw=4 et
   autocmd FileType xml setl ts=4 sts=4 sw=4 et
   autocmd FileType java setl ts=4 sts=4 sw=4 et
