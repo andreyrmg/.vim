@@ -170,6 +170,11 @@ if has("win32")
 endif
 
 if has("autocmd")
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+
   autocmd FileType go setl ts=4 sts=4 sw=4 et
   if exists("g:goroot")
     autocmd FileType go autocmd BufWritePre <buffer> Fmt
