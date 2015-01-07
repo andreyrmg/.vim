@@ -61,7 +61,7 @@ set ch=1
 set novisualbell
 set t_vb=
 
-set backspace=2
+set backspace=indent,eol,start
 
 set hidden
 
@@ -91,11 +91,12 @@ set virtualedit=all
 
 set wildmenu
 
+set showtabline=2
+
 " search options
 set gdefault
 set hlsearch
-set ignorecase
-set smartcase
+set ignorecase smartcase
 set incsearch
 nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
