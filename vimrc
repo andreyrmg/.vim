@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'wincent/command-t'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -186,6 +187,10 @@ if has("autocmd")
   autocmd FileType java setl ts=4 sts=4 sw=4 et
   autocmd FileType javascript setl ts=4 sts=4 sw=4 et
   autocmd FileType groovy setl ts=4 sts=4 sw=4 et
+
+  au FileType go setl ts=4 sts=4 sw=4 noet
+  au FileType go nmap <leader>r <Plug>(go-run)
+  au FileType go nmap <leader>i <Plug>(go-install)
 endif
 
 " Hg
