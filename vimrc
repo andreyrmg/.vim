@@ -136,6 +136,17 @@ nnoremap <M-Right> :vertical resize +5<cr>
 nmap <leader>l set list!<cr>
 set listchars=tab:→\ 
 
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-n>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-p>
+
 set synmaxcol=2048
 
 set nocursorline
