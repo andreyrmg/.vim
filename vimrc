@@ -18,6 +18,9 @@ Plugin 'fatih/vim-go'
 
 Plugin 'derekwyatt/vim-scala'
 
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+
 call vundle#end()
 
 filetype plugin indent on
