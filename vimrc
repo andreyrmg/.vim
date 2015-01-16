@@ -138,7 +138,7 @@ nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
 
-nmap <leader>l set list!<cr>
+nmap <leader>l :set list!<cr>
 set listchars=tab:→\ 
 
 function! InsertTabWrapper()
