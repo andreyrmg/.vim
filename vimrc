@@ -11,8 +11,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'wincent/command-t'
+
 Plugin 'vim-ruby/vim-ruby'
+
 Plugin 'fatih/vim-go'
+
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 
