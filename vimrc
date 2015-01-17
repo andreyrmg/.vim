@@ -142,7 +142,8 @@ nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
 
 nmap <leader>l :set list!<cr>
-set listchars=tab:→\ 
+set list!
+set listchars=tab:→\ ,trail:·
 
 function! InsertTabWrapper()
   let col = col('.') - 1
