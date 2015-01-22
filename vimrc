@@ -21,6 +21,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 
+Plugin 'itchyny/lightline.vim'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -210,3 +212,7 @@ endif
 nmap <f2> :w<cr>
 imap <f2> <esc>:w<cr>
 vmap <f2> <esc>:w<cr>
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
