@@ -28,6 +28,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 
+Plugin 'rust-lang/rust.vim'
+
 Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
