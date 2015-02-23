@@ -1,3 +1,4 @@
+scriptencoding utf-8
 set nocompatible
 
 if exists("did_load_filetypes")
