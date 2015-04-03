@@ -35,6 +35,8 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
+Plugin 'Valloric/YouCompleteMe'
+
 call vundle#end()
 
 filetype plugin indent on
