@@ -31,6 +31,9 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'rust-lang/rust.vim'
 
 Plugin 'itchyny/lightline.vim'
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 call vundle#end()
 
@@ -222,6 +225,3 @@ nmap <f2> :w<cr>
 imap <f2> <esc>:w<cr>
 vmap <f2> <esc>:w<cr>
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
