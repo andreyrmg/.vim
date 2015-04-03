@@ -203,6 +203,7 @@ if has("autocmd")
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
         \   exe "normal! g`\"" |
         \ endif
+  autocmd BufWritePre * :%s/\s\+$//e
 
   autocmd FileType python setl ts=4 sts=4 sw=4 et
   autocmd FileType xml setl ts=4 sts=4 sw=4 et
