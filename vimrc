@@ -43,7 +43,7 @@ syntax on
 set exrc
 
 " tabs and spaces
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 set expandtab
