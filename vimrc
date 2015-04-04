@@ -7,13 +7,19 @@ if exists("did_load_filetypes")
 endif
 
 if has("win32")
-  set rtp+=~/vimfiles/bundle/Vundle.vim
-  let path='~/vimfiles/bundle'
-  call vundle#begin(path)
+  let s:dotvim = '~/vimfiles'
 else
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+  let s:dotvim = '~/.vim'
 endif
+let s:bundle = s:dotvim . '/bundle'
+let s:vundle = s:bundle . '/Vundle.vim'
+
+if !isdirectory(expand(s:vundle))
+  exe '!git clone https://github.com/gmarik/Vundle.vim.git ' . s:vundle
+endif
+
+exe 'set rtp+=' . s:bundle . '/Vundle.vim'
+call vundle#begin(s:bundle)
 
 Plugin 'gmarik/Vundle.vim'
 
