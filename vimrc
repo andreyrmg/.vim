@@ -36,10 +36,22 @@ Plugin 'tpope/vim-fireplace'
 
 Plugin 'rust-lang/rust.vim'
 
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'itchyny/lightline.vim'
 let g:lightline = {
       \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive'
       \ }
+      \ }
+function! MyFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
 
 Plugin 'Valloric/YouCompleteMe'
 
