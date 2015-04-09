@@ -25,6 +25,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'wincent/command-t'
 
+Plugin 'hynek/vim-python-pep8-indent'
+
 Plugin 'vim-ruby/vim-ruby'
 
 Plugin 'fatih/vim-go'
