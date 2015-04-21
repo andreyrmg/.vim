@@ -23,6 +23,8 @@ call vundle#begin(s:bundle)
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'tpope/vim-surround'
+
 Plugin 'wincent/command-t'
 
 Plugin 'hynek/vim-python-pep8-indent'
