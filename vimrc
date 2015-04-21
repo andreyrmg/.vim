@@ -38,6 +38,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 
+Plugin 'vim-scripts/paredit.vim'
+
 Plugin 'rust-lang/rust.vim'
 
 Plugin 'tpope/vim-fugitive'
