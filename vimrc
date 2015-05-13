@@ -120,8 +120,6 @@ set stl=%f\ %M%R\ %l:%v/%L\ %y\ [0x%B]
 
 set laststatus=2
 
-set lazyredraw
-
 set showcmd
 
 set showmode
