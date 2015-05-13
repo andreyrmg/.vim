@@ -27,6 +27,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 
 Plugin 'wincent/command-t'
+let g:CommandTFileScanner = 'find'
 
 Plugin 'hynek/vim-python-pep8-indent'
 
