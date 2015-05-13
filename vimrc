@@ -24,6 +24,7 @@ call vundle#begin(s:bundle)
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 
 Plugin 'wincent/command-t'
 
