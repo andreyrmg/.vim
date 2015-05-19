@@ -23,8 +23,10 @@ call vundle#begin(s:bundle)
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
 
 Plugin 'wincent/command-t'
 let g:CommandTFileScanner = 'find'
@@ -43,8 +45,6 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'vim-scripts/paredit.vim'
 
 Plugin 'rust-lang/rust.vim'
-
-Plugin 'tpope/vim-fugitive'
 
 Plugin 'itchyny/lightline.vim'
 let g:lightline = {
