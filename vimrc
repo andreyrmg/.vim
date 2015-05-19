@@ -142,8 +142,6 @@ set wildmenu
 set wildignore+=**/*.pyc
 set wildignore+=**/*.class
 
-set showtabline=2
-
 " search options
 set gdefault
 set hlsearch
