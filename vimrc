@@ -170,8 +170,6 @@ nmap <silent> ,ww :set invwrap<cr>:set wrap?<cr>
 nmap <silent> ,ev :e $MYVIMRC<cr>
 nmap <silent> ,sv :so $MYVIMRC<cr>
 
-nmap <silent> ,bd :bd<cr>
-
 nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
 nmap <c-j> :bprev<cr>
