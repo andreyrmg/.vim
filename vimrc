@@ -172,9 +172,6 @@ nmap <silent> ,sv :so $MYVIMRC<cr>
 
 nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
 
-nmap <c-j> :bprev<cr>
-nmap <c-k> :bnext<cr>
-
 nnoremap <M-Up> :resize -5<cr>
 nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
