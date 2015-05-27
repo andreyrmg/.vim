@@ -222,21 +222,26 @@ if has("win32")
 endif
 
 if has("autocmd")
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe "normal! g`\"" |
-        \ endif
-  autocmd BufWritePre * :%s/\s\+$//e
+  augroup vimrc_general
+    autocmd!
+    autocmd BufReadPost *
+          \ if line("'\"") > 1 && line("'\"") <= line("$") |
+          \   exe "normal! g`\"" |
+          \ endif
+    autocmd BufWritePre * :%s/\s\+$//e
+  augroup END
 
-  autocmd FileType python setl ts=4 sts=4 sw=4 et
-  autocmd FileType xml setl ts=4 sts=4 sw=4 et
-  autocmd FileType java setl ts=4 sts=4 sw=4 et
-  autocmd FileType javascript setl ts=4 sts=4 sw=4 et
-  autocmd FileType groovy setl ts=4 sts=4 sw=4 et
-
-  au FileType go setl ts=4 sts=4 sw=4 noet
-  au FileType go nmap <leader>r <Plug>(go-run)
-  au FileType go nmap <leader>i <Plug>(go-install)
+  augroup vimrc_filetypes
+    autocmd!
+    autocmd FileType python     setl ts=4 sts=4 sw=4 et
+    autocmd FileType xml        setl ts=4 sts=4 sw=4 et
+    autocmd FileType java       setl ts=4 sts=4 sw=4 et
+    autocmd FileType javascript setl ts=4 sts=4 sw=4 et
+    autocmd FileType groovy     setl ts=4 sts=4 sw=4 et
+    autocmd FileType go         setl ts=4 sts=4 sw=4 noet |
+          \ nnoremap <buffer> <leader>r <Plug>(go-run) |
+          \ nnoremap <buffer> <leader>i <Plug>(go-install)
+  augroup END
 endif
 
 " Hg
