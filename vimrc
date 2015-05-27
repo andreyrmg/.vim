@@ -159,26 +159,26 @@ set nowrap
 
 let mapleader=","
 
-nmap <silent> ,wa :1,9000bwipeout<cr>
+nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
 
-nmap <silent> ,cd :lcd %:h<cr>
-nmap <silent> ,md :!mkdir -p %:p:h<cr>
+nnoremap <silent> <leader>cd :lcd %:h<cr>
+nnoremap <silent> <leader>md :!mkdir -p %:p:h<cr>
 
-nmap <silent> ,n :nohls<cr>
+nnoremap <silent> <leader>n :nohls<cr>
 
-nmap <silent> ,ww :set invwrap<cr>:set wrap?<cr>
+nnoremap <silent> <leader>ww :set invwrap<cr>:set wrap?<cr>
 
-nmap <silent> ,ev :e $MYVIMRC<cr>
-nmap <silent> ,sv :so $MYVIMRC<cr>
+nnoremap <silent> <leader>ev :e $MYVIMRC<cr>
+nnoremap <silent> <leader>sv :so $MYVIMRC<cr>
 
-nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
+nnoremap <silent> <leader>x :w<cr>:!chmod 755 %<cr>:e<cr>
 
 nnoremap <M-Up> :resize -5<cr>
 nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
 
-nmap <leader>l :set list!<cr>
+nnoremap <leader>l :set list! list?<cr>
 set list!
 set listchars=tab:→\ ,trail:·
 
@@ -245,7 +245,5 @@ if has("win32")
 endif
 
 " Fast save
-nmap <f2> :w<cr>
-imap <f2> <esc>:w<cr>
-vmap <f2> <esc>:w<cr>
+nnoremap <f2> :w<cr>
 
