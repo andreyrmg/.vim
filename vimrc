@@ -6,6 +6,8 @@ if exists("did_load_filetypes")
   filetype plugin indent off
 endif
 
+" plugins {{{
+" bundle initialization {{{
 if has("win32")
   let s:dotvim = '~/vimfiles'
 else
@@ -19,6 +21,7 @@ if !isdirectory(expand(s:vundle))
 endif
 
 exe 'set rtp+=' . s:vundle
+" }}}
 call vundle#begin(s:bundle)
 
 Plugin 'gmarik/Vundle.vim'
@@ -65,6 +68,7 @@ Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
 call vundle#end()
+" }}}
 
 filetype plugin indent on
 syntax on
@@ -158,6 +162,8 @@ set autowrite
 
 set nowrap
 
+set list listchars=tab:→\ ,trail:·
+
 let mapleader=","
 
 nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
@@ -182,6 +188,7 @@ nnoremap <M-Right> :vertical resize +5<cr>
 nnoremap <leader>l :set list! list?<cr>
 set list!
 set listchars=tab:→\ ,trail:·
+" }}}
 
 function! InsertTabWrapper()
   let col = col('.') - 1
@@ -222,6 +229,7 @@ if has("win32")
   language ctype Russian_Russia.1251
 endif
 
+" autocommands {{{
 if has("autocmd")
   augroup vimrc_general
     autocmd!
@@ -234,6 +242,7 @@ if has("autocmd")
 
   augroup vimrc_filetypes
     autocmd!
+    autocmd FileType vim        setl foldmethod=marker
     autocmd FileType python     setl ts=4 sts=4 sw=4 et
     autocmd FileType xml        setl ts=4 sts=4 sw=4 et
     autocmd FileType java       setl ts=4 sts=4 sw=4 et
@@ -253,3 +262,4 @@ endif
 " Fast save
 nnoremap <f2> :w<cr>
 
+" }}}
