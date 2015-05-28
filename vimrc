@@ -179,6 +179,9 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<cr>
 
 nnoremap <silent> <leader>x :w<cr>:!chmod 755 %<cr>:e<cr>
 
+nnoremap <leader>sp :rightbelow split<space>
+nnoremap <leader>vs :rightbelow vsplit<space>
+
 nnoremap <M-Up> :resize -5<cr>
 nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
