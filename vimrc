@@ -112,8 +112,6 @@ endfunction
 
 set wrapscan
 
-set ch=1
-
 set novisualbell
 set t_vb=
 
@@ -153,7 +151,6 @@ set gdefault
 set hlsearch
 set ignorecase smartcase
 set incsearch
-nnoremap <silent> <cr> :nohlsearch<cr><cr>
 
 "set clipboard+=unnamed
 
@@ -164,6 +161,7 @@ set nowrap
 
 set list listchars=tab:→\ ,trail:·
 
+" mappings {{{
 let mapleader=","
 
 nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
@@ -171,7 +169,8 @@ nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
 nnoremap <silent> <leader>cd :lcd %:h<cr>
 nnoremap <silent> <leader>md :!mkdir -p %:p:h<cr>
 
-nnoremap <silent> <leader>n :nohls<cr>
+nnoremap <silent> <leader>n :nohlsearch<cr>
+nnoremap <silent> <cr>      :nohlsearch<cr><cr>
 
 nnoremap <silent> <leader>ww :set invwrap<cr>:set wrap?<cr>
 
@@ -185,9 +184,12 @@ nnoremap <M-Down> :resize +5<cr>
 nnoremap <M-Left> :vertical resize -5<cr>
 nnoremap <M-Right> :vertical resize +5<cr>
 
-nnoremap <leader>l :set list! list?<cr>
-set list!
-set listchars=tab:→\ ,trail:·
+nnoremap <leader>l :setl list! list?<cr>
+
+" just save the current buffer
+nnoremap <f2> :w<cr>
+" save the current buffer and continue editing at the same position
+inoremap <f2> <esc>:w<cr>g`^i
 " }}}
 
 function! InsertTabWrapper()
@@ -252,14 +254,13 @@ if has("autocmd")
           \ nnoremap <buffer> <leader>r <Plug>(go-run) |
           \ nnoremap <buffer> <leader>i <Plug>(go-install)
   augroup END
+
+  " Hg
+  if has("win32")
+    augroup win32
+      autocmd!
+      autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=78
+    augroup END
+  endif
 endif
-
-" Hg
-if has("win32")
-  autocmd BufNewFile,BufRead hg-editor-*.txt setl fenc=cp1251 tw=79
-endif
-
-" Fast save
-nnoremap <f2> :w<cr>
-
 " }}}
