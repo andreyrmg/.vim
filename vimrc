@@ -17,10 +17,10 @@ let s:bundle = s:dotvim . '/bundle'
 let s:vundle = s:bundle . '/Vundle.vim'
 
 if !isdirectory(expand(s:vundle))
-  exe '!git clone https://github.com/gmarik/Vundle.vim.git ' . s:vundle
+  execute '!git clone https://github.com/gmarik/Vundle.vim.git' s:vundle
 endif
 
-exe 'set rtp+=' . s:vundle
+execute 'set rtp+=' . s:vundle
 " }}}
 call vundle#begin(s:bundle)
 
@@ -237,7 +237,7 @@ if has("autocmd")
     autocmd!
     autocmd BufReadPost *
           \ if line("'\"") > 1 && line("'\"") <= line("$") |
-          \   exe "normal! g`\"" |
+          \   execute "normal! g`\"" |
           \ endif
     autocmd BufWritePre * :%s/\s\+$//e
   augroup END
