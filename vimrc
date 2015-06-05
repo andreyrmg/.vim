@@ -26,6 +26,8 @@ call vundle#begin(s:bundle)
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'altercation/vim-colors-solarized'
+
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -214,7 +216,8 @@ set nocursorcolumn
 set nu
 
 set t_Co=256
-colorscheme wombat256mod
+set background=dark
+colorscheme solarized
 
 set nobackup
 set nowritebackup
