@@ -1,5 +1,6 @@
 set guioptions-=T
 set guioptions-=m
+set guioptions-=L,r
 set guioptions+=c
 
 set lines=45
