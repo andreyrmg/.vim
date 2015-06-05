@@ -53,10 +53,10 @@ Plugin 'rust-lang/rust.vim'
 
 Plugin 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive'
