@@ -196,7 +196,7 @@ nnoremap <leader>l :setl list! list?<cr>
 " just save the current buffer
 nnoremap <f2> :w<cr>
 " save the current buffer and continue editing at the same position
-inoremap <f2> <esc>:w<cr>g`^i
+inoremap <f2> <esc>:w<cr>
 " }}}
 
 function! InsertTabWrapper()
