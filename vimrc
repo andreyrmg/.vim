@@ -7,51 +7,45 @@ if exists("did_load_filetypes")
 endif
 
 " plugins {{{
-" bundle initialization {{{
+" vim-plug initialization {{{
 if has("win32")
   let s:dotvim = '~/vimfiles'
 else
   let s:dotvim = '~/.vim'
 endif
-let s:bundle = s:dotvim . '/bundle'
-let s:vundle = s:bundle . '/Vundle.vim'
-
-if !isdirectory(expand(s:vundle))
-  execute '!git clone https://github.com/gmarik/Vundle.vim.git' s:vundle
+let s:plug_file = s:dotvim . '/autoload/plug.vim'
+if !filereadable(expand(s:plug_file))
+  execute 'silent !curl -fLo' s:plug_file '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
-
-execute 'set rtp+=' . s:vundle
 " }}}
-call vundle#begin(s:bundle)
 
-Plugin 'gmarik/Vundle.vim'
+call plug#begin(s:dotvim . '/plugged')
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 
-Plugin 'wincent/command-t'
-let g:CommandTFileScanner = 'find'
+Plug 'wincent/command-t', { 'do': 'cd ./ruby/command-t && ruby extconf.rb && make' }
 
-Plugin 'hynek/vim-python-pep8-indent'
+Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 
-Plugin 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 
-Plugin 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-Plugin 'vim-scripts/paredit.vim'
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
-Plugin 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
-Plugin 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
@@ -66,13 +60,13 @@ function! MyFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh --clang-completer --system-libclang' }
 let g:ycm_min_num_of_chars_for_completion = 999
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
-Plugin 'zah/nim.vim'
+Plug 'zah/nim.vim', { 'for': 'nim' }
 
-call vundle#end()
+call plug#end()
 " }}}
 
 filetype plugin indent on
@@ -138,7 +132,7 @@ syntax on
 
 set mousehide
 
-set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+" set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
 set history=100
 
