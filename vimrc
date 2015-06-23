@@ -132,8 +132,6 @@ syntax on
 
 set mousehide
 
-" set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-
 set history=100
 
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
