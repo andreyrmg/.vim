@@ -41,7 +41,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim', { 'for': ['clojure', 'hy'] }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
@@ -65,6 +65,8 @@ let g:ycm_min_num_of_chars_for_completion = 999
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
 Plug 'zah/nim.vim', { 'for': 'nim' }
+
+Plug 'hylang/vim-hy', { 'for': 'hy' }
 
 call plug#end()
 " }}}
