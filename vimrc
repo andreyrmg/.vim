@@ -21,8 +21,6 @@ endif
 
 call plug#begin(s:dotvim . '/plugged')
 
-Plug 'altercation/vim-colors-solarized'
-
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -47,7 +45,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
@@ -214,7 +212,7 @@ set nu
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme wombat256mod
 
 set nobackup
 set nowritebackup

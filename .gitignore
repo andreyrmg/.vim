@@ -1,5 +1,6 @@
 .*
 !.gitignore
-bundle/
+autoload/plug.vim
+plugged/
 
 *.py[cod]
