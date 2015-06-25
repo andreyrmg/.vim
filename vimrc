@@ -15,7 +15,6 @@ endif
 
 call plug#begin(s:dotvim . '/plugged')
 
-Plug '29decibel/codeschool-vim-theme'
 Plug 'w0ng/vim-hybrid'
 
 Plug 'tpope/vim-commentary'
