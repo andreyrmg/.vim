@@ -23,6 +23,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'wincent/command-t', { 'do': 'cd ./ruby/command-t && ruby extconf.rb && make' }
+Plug 'rking/ag.vim'
+let g:agprg = 'ag --vimgrep'
 
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 
