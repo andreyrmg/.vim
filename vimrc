@@ -9,7 +9,7 @@ else
 endif
 let s:plug_file = s:dotvim . '/autoload/plug.vim'
 if !filereadable(expand(s:plug_file))
-  execute 'silent !curl -fLo' s:plug_file '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  silent execute '!curl -fLo' s:plug_file '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
 " }}}
 
