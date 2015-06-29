@@ -76,6 +76,7 @@ set autowrite
 set backspace=indent,eol,start
 set colorcolumn=+1
 set cpoptions+=$
+set cursorline
 set encoding=utf-8
 set hidden
 set laststatus=2
