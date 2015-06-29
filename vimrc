@@ -74,6 +74,7 @@ syntax on
 set autoread
 set autowrite
 set backspace=indent,eol,start
+set colorcolumn=+1
 set cpoptions+=$
 set encoding=utf-8
 set hidden
