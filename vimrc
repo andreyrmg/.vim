@@ -22,24 +22,43 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 
-Plug 'wincent/command-t', { 'do': 'cd ./ruby/command-t && ruby extconf.rb && make' }
+Plug 'wincent/command-t', {
+      \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
+      \ }
+
 Plug 'rking/ag.vim'
 let g:agprg = 'ag --vimgrep'
 
-Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'hynek/vim-python-pep8-indent', {
+      \ 'for': 'python'
+      \ }
 
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby', {
+      \ 'for': 'ruby'
+      \ }
 
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', {
+      \ 'for': 'go'
+      \ }
 
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'derekwyatt/vim-scala', {
+      \ 'for': 'scala'
+      \ }
 
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', {
+      \ 'for': 'clojure'
+      \ }
+Plug 'tpope/vim-fireplace', {
+      \ 'for': 'clojure'
+      \ }
 
-Plug 'vim-scripts/paredit.vim', { 'for': ['clojure', 'hy'] }
+Plug 'vim-scripts/paredit.vim', {
+      \ 'for': ['clojure', 'hy']
+      \ }
 
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'rust-lang/rust.vim', {
+      \ 'for': 'rust'
+      \ }
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
@@ -61,9 +80,13 @@ Plug 'Valloric/YouCompleteMe', {
       \ }
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
-Plug 'zah/nim.vim', { 'for': 'nim' }
+Plug 'zah/nim.vim', {
+      \ 'for': 'nim'
+      \ }
 
-Plug 'hylang/vim-hy', { 'for': 'hy' }
+Plug 'hylang/vim-hy', {
+      \ 'for': 'hy'
+      \ }
 
 call plug#end()
 " }}}
