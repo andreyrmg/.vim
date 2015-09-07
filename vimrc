@@ -56,8 +56,9 @@ function! MyFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh --clang-completer --system-libclang' }
-let g:ycm_min_num_of_chars_for_completion = 999
+Plug 'Valloric/YouCompleteMe', {
+      \ 'do': './install.py --clang-completer --system-libclang'
+      \ }
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
 Plug 'zah/nim.vim', { 'for': 'nim' }
