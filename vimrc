@@ -163,9 +163,9 @@ if has("autocmd")
     autocmd FileType java       setl sts=4 sw=4 et
     autocmd FileType javascript setl sts=4 sw=4 et
     autocmd FileType groovy     setl sts=4 sw=4 et
-    autocmd FileType go         setl sts=4 sw=4 noet |
-          \ nnoremap <buffer> <leader>r <Plug>(go-run) |
-          \ nnoremap <buffer> <leader>i <Plug>(go-install)
+    autocmd FileType go         setl sts=4 sw=4 noet ts=4 |
+          \ nmap <buffer> <leader>gr <Plug>(go-run) |
+          \ nmap <buffer> <leader>gi <Plug>(go-install)
   augroup END
 
   " Hg
