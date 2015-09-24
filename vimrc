@@ -16,6 +16,7 @@ endif
 call plug#begin(s:dotvim . '/plugged')
 
 Plug 'w0ng/vim-hybrid'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -62,7 +63,7 @@ Plug 'rust-lang/rust.vim', {
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
@@ -118,7 +119,7 @@ set wildmode=longest,full
 " color scheme {{{
 set t_Co=256
 set background=dark
-colorscheme hybrid
+colorscheme solarized
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
