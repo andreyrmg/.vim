@@ -77,7 +77,7 @@ function! MyFugitive()
 endfunction
 
 Plug 'Valloric/YouCompleteMe', {
-      \ 'do': 'python2 install.py --clang-completer'
+      \ 'do': 'python install.py --clang-completer'
       \ }
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
 
