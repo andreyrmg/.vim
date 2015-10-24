@@ -120,6 +120,7 @@ set wildmode=longest,full
 set t_Co=256
 set background=dark
 colorscheme solarized
+let g:solarized_visibility="low"
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
