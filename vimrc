@@ -114,6 +114,7 @@ set sidescroll=1
 set virtualedit=onemore
 set wildignore+=**/*.pyc
 set wildignore+=**/*.class
+set wildignore+=**/target/*
 set wildmenu
 set wildmode=longest,full
 
