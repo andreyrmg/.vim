@@ -26,6 +26,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'wincent/command-t', {
       \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
       \ }
+let g:CommandTFileScanner = 'find'
 
 Plug 'rking/ag.vim'
 let g:agprg = 'ag --vimgrep'
