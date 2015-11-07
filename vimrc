@@ -64,7 +64,7 @@ Plug 'rust-lang/rust.vim', {
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
@@ -121,7 +121,7 @@ set wildmode=longest,full
 " color scheme {{{
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 let g:solarized_visibility="low"
 " }}}
 " tabs and spaces {{{
