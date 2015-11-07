@@ -13,8 +13,8 @@ else
   let s:uname = system("uname -s")
   if s:uname == "Darwin\n"
     set lines=55
-    set columns=156
-    set guifont=Monaco:h14
+    set columns=182
+    set guifont=Menlo:h12
   endif
 endif
 
