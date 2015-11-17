@@ -169,11 +169,13 @@ nnoremap <leader>vs :rightbelow vsplit<space>
 
 " just save the current buffer
 nnoremap <f2> :w<cr>
-" save the current buffer and continue editing at the same position
 inoremap <f2> <esc>:w<cr>
 
 " disable Ex mode
 nmap Q <nop>
+
+" quick quit
+nnoremap <leader>q ZQ
 " }}}
 
 " autocommands {{{
