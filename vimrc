@@ -29,7 +29,7 @@ Plug 'wincent/command-t', {
 let g:CommandTFileScanner = 'find'
 
 Plug 'rking/ag.vim'
-let g:agprg = 'ag --vimgrep'
+let g:ag_prg = 'ag --vimgrep'
 
 Plug 'hynek/vim-python-pep8-indent', {
       \ 'for': 'python'
