@@ -28,9 +28,6 @@ Plug 'wincent/command-t', {
       \ }
 let g:CommandTFileScanner = 'find'
 
-Plug 'rking/ag.vim'
-let g:ag_prg = 'ag --vimgrep'
-
 Plug 'hynek/vim-python-pep8-indent', {
       \ 'for': 'python'
       \ }
@@ -41,21 +38,6 @@ Plug 'vim-ruby/vim-ruby', {
 
 Plug 'fatih/vim-go', {
       \ 'for': 'go'
-      \ }
-
-Plug 'derekwyatt/vim-scala', {
-      \ 'for': 'scala'
-      \ }
-
-Plug 'guns/vim-clojure-static', {
-      \ 'for': 'clojure'
-      \ }
-Plug 'tpope/vim-fireplace', {
-      \ 'for': 'clojure'
-      \ }
-
-Plug 'vim-scripts/paredit.vim', {
-      \ 'for': ['clojure', 'hy']
       \ }
 
 Plug 'rust-lang/rust.vim', {
@@ -76,19 +58,6 @@ let g:lightline = {
 function! MyFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
-
-Plug 'Valloric/YouCompleteMe', {
-      \ 'do': 'python install.py --clang-completer'
-      \ }
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
-
-Plug 'zah/nim.vim', {
-      \ 'for': 'nim'
-      \ }
-
-Plug 'hylang/vim-hy', {
-      \ 'for': 'hy'
-      \ }
 
 call plug#end()
 " }}}
