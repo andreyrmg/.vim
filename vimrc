@@ -80,6 +80,8 @@ set number
 set nowrap
 set noshowmode
 set sidescroll=1
+set timeoutlen=1000
+set ttimeoutlen=0
 set virtualedit=onemore
 set wildignore+=**/*.pyc
 set wildignore+=**/*.class
