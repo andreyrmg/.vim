@@ -144,7 +144,7 @@ nnoremap <f2> :w<cr>
 inoremap <f2> <esc>:w<cr>
 
 " disable Ex mode
-nmap Q <nop>
+nnoremap Q <nop>
 
 " quick quit
 nnoremap <leader>q ZQ
