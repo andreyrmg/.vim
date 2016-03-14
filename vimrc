@@ -148,6 +148,17 @@ nnoremap Q <nop>
 
 " quick quit
 nnoremap <leader>q ZQ
+
+function! s:CompleteOrInsertTab()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <expr> <tab> <SID>CompleteOrInsertTab()
+inoremap <s-tab> <c-n>
 " }}}
 
 " autocommands {{{
