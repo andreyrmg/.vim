@@ -72,6 +72,7 @@ set backspace=indent,eol,start
 set colorcolumn=+1
 set cpoptions+=$
 set encoding=utf-8
+set exrc
 set hidden
 set laststatus=2
 set list
