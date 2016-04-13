@@ -32,14 +32,6 @@ Plug 'hynek/vim-python-pep8-indent', {
       \ 'for': 'python'
       \ }
 
-Plug 'vim-ruby/vim-ruby', {
-      \ 'for': 'ruby'
-      \ }
-
-Plug 'fatih/vim-go', {
-      \ 'for': 'go'
-      \ }
-
 Plug 'rust-lang/rust.vim', {
       \ 'for': 'rust'
       \ }
