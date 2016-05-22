@@ -31,6 +31,8 @@ let g:CommandTMatchWindowReverse = 0
 let g:CommandTAcceptSelectionSplitCommand = 'rightbelow sp'
 let g:CommandTAcceptSelectionVSplitCommand = 'rightbelow vs'
 
+Plug 'rking/ag.vim'
+
 Plug 'hynek/vim-python-pep8-indent', {
       \ 'for': 'python'
       \ }
