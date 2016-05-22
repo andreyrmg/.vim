@@ -84,6 +84,7 @@ set virtualedit=onemore
 set wildignore+=**/*.o
 set wildignore+=**/*.pyc
 set wildignore+=**/*.class
+set wildignore+=**/build/*
 set wildignore+=**/target/*
 set wildmenu
 set wildmode=longest,full
