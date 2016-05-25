@@ -26,7 +26,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'wincent/command-t', {
       \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
       \ }
-let g:CommandTFileScanner = 'find'
+let g:CommandTFileScanner = 'git'
 let g:CommandTMatchWindowReverse = 0
 let g:CommandTAcceptSelectionSplitCommand = 'rightbelow sp'
 let g:CommandTAcceptSelectionVSplitCommand = 'rightbelow vs'
