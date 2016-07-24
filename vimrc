@@ -43,7 +43,7 @@ Plug 'rust-lang/rust.vim', {
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': has("gui_running") ? 'solarized' : 'wombat',
+      \ 'colorscheme': has("gui_running") ? 'solarized_light' : 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
@@ -92,12 +92,13 @@ set wildmode=longest,full
 " color scheme {{{
 set t_Co=256
 set t_ut=
-set background=dark
 if has("gui_running")
   let g:solarized_contrast = "high"
   let g:solarized_visibility = "low"
+  set background=light
   colorscheme solarized
 else
+  set background=dark
   colorscheme hybrid
 endif
 " }}}
