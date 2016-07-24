@@ -41,6 +41,8 @@ Plug 'rust-lang/rust.vim', {
       \ 'for': 'rust'
       \ }
 
+Plug 'fatih/vim-go'
+
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
       \ 'colorscheme': has("gui_running") ? 'solarized_light' : 'wombat',
@@ -167,6 +169,16 @@ inoremap <expr> <tab> <SID>CompleteOrInsertTab()
 inoremap <s-tab> <c-n>
 " }}}
 
+" help functions {{{
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+" }}}
 " autocommands {{{
 if has("autocmd")
   augroup vimrc_general
@@ -185,9 +197,12 @@ if has("autocmd")
     autocmd FileType java       setl sts=4 sw=4 et
     autocmd FileType javascript setl sts=4 sw=4 et
     autocmd FileType groovy     setl sts=4 sw=4 et
-    autocmd FileType go         setl sts=4 sw=4 noet ts=4 |
-          \ nmap <buffer> <leader>gr <Plug>(go-run) |
-          \ nmap <buffer> <leader>gi <Plug>(go-install)
+    autocmd FileType go         setl sts=4 sw=4 noet ts=4|
+          \nmap <buffer> <leader>gr <Plug>(go-run)|
+          \nmap <buffer> <leader>gb :<c-u>call <SID>build_go_files()<cr>|
+          \nmap <buffer> <leader>gt <Plug>(go-test)|
+          \nmap <buffer> <leader>gc <Plug>(go-coverage-toggle)|
+          \nmap <buffer> <leader>gi <Plug>(go-install)
   augroup END
 
   " Hg
