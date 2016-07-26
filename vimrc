@@ -28,8 +28,6 @@ Plug 'wincent/command-t', {
       \ }
 let g:CommandTFileScanner = 'git'
 let g:CommandTMatchWindowReverse = 0
-let g:CommandTAcceptSelectionSplitCommand = 'rightbelow sp'
-let g:CommandTAcceptSelectionVSplitCommand = 'rightbelow vs'
 
 Plug 'rking/ag.vim'
 
@@ -80,6 +78,7 @@ set number
 set nowrap
 set noshowmode
 set sidescroll=1
+set splitright
 set timeoutlen=1000
 set ttimeoutlen=0
 set virtualedit=onemore
