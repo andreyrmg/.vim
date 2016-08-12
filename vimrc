@@ -53,7 +53,7 @@ let g:lightline = {
       \ }
       \ }
 function! MyFugitive()
-  return exists('*fugitive#head') ? fugitive#head() : ''
+  return exists('*fugitive#statusline') ? fugitive#statusline() : ''
 endfunction
 
 call plug#end()
