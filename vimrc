@@ -43,7 +43,7 @@ Plug 'fatih/vim-go'
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-      \ 'colorscheme': has("gui_running") ? 'solarized_light' : 'wombat',
+      \ 'colorscheme': has("gui_running") ? 'solarized' : 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
