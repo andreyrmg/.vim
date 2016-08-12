@@ -56,7 +56,10 @@ function! MyFugitive()
   return exists('*fugitive#statusline') ? fugitive#statusline() : ''
 endfunction
 
-execute 'source' s:dotvim . '/plugins.vim'
+let s:custom_plugins_file = s:dotvim . '/plugins.vim'
+if filereadable(expand(s:custom_plugins_file))
+  execute 'source' s:dotvim . '/plugins.vim'
+endif
 
 call plug#end()
 " }}}
