@@ -14,9 +14,9 @@ else
   if s:uname == "Linux\n"
     set guifont=Ubuntu\ Mono\ 18
   elseif s:uname == "Darwin\n"
-    set lines=46
-    set columns=182
-    set guifont=Monaco:h18
+    set lines=34
+    set columns=127
+    set guifont=Monaco:h17
   endif
 endif
 
