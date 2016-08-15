@@ -58,7 +58,7 @@ endfunction
 
 let s:custom_plugins_file = s:dotvim . '/plugins.vim'
 if filereadable(expand(s:custom_plugins_file))
-  execute 'source' s:dotvim . '/plugins.vim'
+  execute 'source' s:custom_plugins_file
 endif
 
 call plug#end()
