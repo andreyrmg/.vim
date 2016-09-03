@@ -31,16 +31,6 @@ let g:CommandTMatchWindowReverse = 0
 
 Plug 'rking/ag.vim'
 
-Plug 'hynek/vim-python-pep8-indent', {
-      \ 'for': 'python'
-      \ }
-
-Plug 'rust-lang/rust.vim', {
-      \ 'for': 'rust'
-      \ }
-
-Plug 'fatih/vim-go'
-
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
       \ 'colorscheme': has("gui_running") ? 'solarized' : 'wombat',
