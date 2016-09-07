@@ -29,7 +29,9 @@ Plug 'wincent/command-t', {
 let g:CommandTFileScanner = 'git'
 let g:CommandTMatchWindowReverse = 0
 
-Plug 'rking/ag.vim'
+Plug 'rking/ag.vim', {
+      \ 'on': ['Ag', 'AgBuffer', 'AgAdd', 'AgFromSearch', 'LAg', 'LAgBuffer', 'LAgAdd', 'AgFile', 'AgHelp', 'LAgHelp']
+      \ }
 
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
