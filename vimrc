@@ -163,6 +163,9 @@ function! s:CompleteOrInsertTab()
 endfunction
 inoremap <expr> <tab> <SID>CompleteOrInsertTab()
 inoremap <s-tab> <c-n>
+
+" replace <esc>
+inoremap jj <esc>
 " }}}
 
 " help functions {{{
