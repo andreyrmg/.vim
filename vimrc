@@ -121,6 +121,7 @@ set imsearch=0
 " }}}
 " mappings {{{
 let mapleader=","
+let maplocalleader=","
 
 nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
 
