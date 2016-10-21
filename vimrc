@@ -123,8 +123,6 @@ set imsearch=0
 let mapleader=","
 let maplocalleader=","
 
-nnoremap <silent> <leader>wa :1,9000bwipeout<cr>
-
 nnoremap <silent> <leader>cd :lcd %:h<cr>
 nnoremap <silent> <leader>md :!mkdir -p %:p:h<cr>
 
@@ -141,6 +139,7 @@ nnoremap <leader>vs :rightbelow vsplit<space>
 
 " just save the current buffer
 nnoremap <f2> :w<cr>
+nnoremap <leader>w :w<cr>
 inoremap <f2> <esc>:w<cr>
 
 " disable Ex mode
@@ -148,6 +147,8 @@ nnoremap Q <nop>
 
 " quick quit
 nnoremap <leader>q ZQ
+" quick command mode
+nnoremap ; :
 
 function! s:CompleteOrInsertTab()
   let col = col('.') - 1
