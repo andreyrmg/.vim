@@ -166,6 +166,14 @@ inoremap <s-tab> <c-n>
 
 " replace <esc>
 inoremap jj <esc>
+
+" copy/paste to/from X clipboard
+nnoremap <leader>y "+y
+nnoremap <leader>yy "+yy
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
 " }}}
 
 " help functions {{{
