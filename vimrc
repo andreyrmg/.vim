@@ -26,7 +26,7 @@ Plug 'tpope/vim-repeat'
 Plug 'wincent/command-t', {
       \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
       \ }
-let g:CommandTFileScanner = 'git'
+let g:CommandTFileScanner = 'find'
 let g:CommandTMatchWindowReverse = 0
 
 Plug 'rking/ag.vim', {
