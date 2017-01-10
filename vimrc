@@ -16,7 +16,6 @@ endif
 call plug#begin(s:dotvim . '/plugged')
 
 Plug 'w0ng/vim-hybrid'
-Plug 'altercation/vim-colors-solarized'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
