@@ -90,6 +90,8 @@ set wildignore+=**/target/*
 set wildmenu
 set wildmode=longest,full
 
+let g:pascal_fpc = 1
+
 " color scheme {{{
 set t_Co=256
 set t_ut=
