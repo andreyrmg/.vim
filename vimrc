@@ -177,6 +177,9 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
+
+nnoremap <d-9> :Gstatus<cr>
+nnoremap <m-9> :Gstatus<cr>
 " }}}
 
 " help functions {{{
