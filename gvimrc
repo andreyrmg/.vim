@@ -19,7 +19,7 @@ else
   elseif s:uname == "Darwin\n"
     set lines=34
     set columns=127
-    set guifont=Monaco:h17
+    set guifont=Monaco:h15
   endif
 endif
 
