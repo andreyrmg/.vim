@@ -72,7 +72,6 @@ set laststatus=2
 set list
 set listchars=tab:→\ ,trail:·
 set modeline
-set number
 set nowrap
 set noshowmode
 set path+=**
