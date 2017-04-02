@@ -75,7 +75,7 @@ set modeline
 set number
 set nowrap
 set noshowmode
-set path=**
+set path+=**
 set sidescroll=1
 set splitright
 set timeoutlen=1000
