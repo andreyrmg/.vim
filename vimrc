@@ -92,6 +92,8 @@ set winwidth=80
 let g:pascal_fpc = 1
 let g:pascal_delphi = 1
 
+let g:rustfmt_autosave = 1
+
 " color scheme {{{
 set t_Co=256
 set t_ut=
