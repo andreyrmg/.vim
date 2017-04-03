@@ -12,15 +12,10 @@ if has("win32")
   if has("directx")
     set renderoptions=type:directx
   endif
-else
-  let s:uname = system("uname -s")
-  if s:uname == "Linux\n"
-    set guifont=Ubuntu\ Mono\ 18
-  elseif s:uname == "Darwin\n"
-    set lines=34
-    set columns=127
-    set guifont=Menlo:h14
-  endif
+elseif has("unix")
+  set guifont=Ubuntu\ Mono\ 12
+elseif has("osx")
+  set guifont=Menlo:h14
 endif
 
 set vb t_vb=
