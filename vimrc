@@ -120,7 +120,11 @@ set nowritebackup
 set noswapfile
 " }}}
 " input method {{{
-set keymap=russian-jcukenwin
+if has('osx')
+  set keymap=russian-jcukenmac
+else
+  set keymap=russian-jcukenwin
+endif
 set iminsert=0
 set imsearch=0
 " }}}
