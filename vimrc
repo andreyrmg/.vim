@@ -126,7 +126,7 @@ else
   set keymap=russian-jcukenwin
 endif
 set iminsert=0
-set imsearch=0
+set imsearch=-1
 " }}}
 " mappings {{{
 let mapleader=","
