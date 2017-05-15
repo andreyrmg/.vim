@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-dispatch'
 
 Plug 'wincent/command-t', {
       \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
