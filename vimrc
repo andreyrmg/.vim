@@ -27,8 +27,9 @@ Plug 'tpope/vim-dispatch'
 Plug 'wincent/command-t', {
       \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
       \ }
+let g:CommandTMaxHeight = 10
+let g:CommandTMinHeight = 10
 let g:CommandTFileScanner = 'find'
-let g:CommandTMatchWindowReverse = 0
 
 Plug 'rking/ag.vim', {
       \ 'on': ['Ag', 'AgBuffer', 'AgAdd', 'AgFromSearch', 'LAg', 'LAgBuffer', 'LAgAdd', 'AgFile', 'AgHelp', 'LAgHelp']
