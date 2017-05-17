@@ -25,28 +25,25 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 
 Plug 'wincent/command-t', {
-      \ 'do': 'cd ./ruby/command-t && ruby extconf.rb && make'
+      \ 'do': 'cd ruby/command-t && ruby extconf.rb && make'
       \ }
 let g:CommandTMaxHeight = 10
 let g:CommandTMinHeight = 10
 let g:CommandTFileScanner = 'find'
 
-Plug 'rking/ag.vim', {
-      \ 'on': ['Ag', 'AgBuffer', 'AgAdd', 'AgFromSearch', 'LAg', 'LAgBuffer', 'LAgAdd', 'AgFile', 'AgHelp', 'LAgHelp']
-      \ }
-
 Plug 'itchyny/lightline.vim'
+Plug 'cocopon/lightline-hybrid.vim'
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'hybrid',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'relativepath', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'MyFugitive'
+      \   'fugitive': 'LightlineFugitive'
       \ }
       \ }
-function! MyFugitive()
+function! LightlineFugitive()
   return exists('*fugitive#statusline') ? fugitive#statusline() : ''
 endfunction
 
@@ -154,7 +151,7 @@ nnoremap <leader>w :w<cr>
 inoremap <f2> <esc>:w<cr>
 
 " disable Ex mode
-nnoremap Q <nop>
+nnoremap Q gq
 
 " quick quit
 nnoremap <leader>q ZQ
@@ -218,12 +215,6 @@ if has("autocmd")
     autocmd FileType java       setl sts=4 sw=4 et
     autocmd FileType javascript setl sts=4 sw=4 et
     autocmd FileType groovy     setl sts=4 sw=4 et
-    autocmd FileType go         setl sts=4 sw=4 noet ts=4|
-          \nmap <buffer> <leader>gr <Plug>(go-run)|
-          \nmap <buffer> <leader>gb :<c-u>call <SID>build_go_files()<cr>|
-          \nmap <buffer> <leader>gt <Plug>(go-test)|
-          \nmap <buffer> <leader>gc <Plug>(go-coverage-toggle)|
-          \nmap <buffer> <leader>gi <Plug>(go-install)
   augroup END
 
   " Hg
