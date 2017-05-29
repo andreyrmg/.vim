@@ -4,9 +4,6 @@ set guioptions-=L
 set guioptions-=r
 set guioptions+=c
 
-set lines=45
-set columns=135
-
 if has("win32")
   set guifont=Consolas:h10:cDEFAULT
   if has("directx")
