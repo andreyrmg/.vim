@@ -47,7 +47,7 @@ function! LightlineFugitive()
   return exists('*fugitive#statusline') ? fugitive#statusline() : ''
 endfunction
 
-let s:custom_plugins_file = s:dotvim . '/plugins.vim'
+let s:custom_plugins_file = s:dotvim . '/' . 'plugins.vim'
 if filereadable(expand(s:custom_plugins_file))
   execute 'source' s:custom_plugins_file
 endif
