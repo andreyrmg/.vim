@@ -5,9 +5,9 @@ set guioptions-=r
 set guioptions+=c
 
 if has("win32")
-  set guifont=Consolas:h10:cDEFAULT
+  set guifont=Liberation\ Mono:h12:cDEFAULT
   if has("directx")
-    set renderoptions=type:directx
+    set renderoptions=type:directx,level:1.0,geom:1,renmode:3,taamode:1
   endif
 elseif has("unix")
   set guifont=Ubuntu\ Mono\ 14
