@@ -10,7 +10,7 @@ if has("win32")
     set renderoptions=type:directx
   endif
 elseif has("unix")
-  set guifont=Liberation\ Mono\ 12
+  set guifont=Ubuntu\ Mono\ 14
 elseif has("osx")
   set guifont=Menlo:h14
 endif
