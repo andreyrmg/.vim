@@ -25,7 +25,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 
 Plug 'wincent/command-t', {
-      \ 'do': 'cd ruby/command-t && ruby extconf.rb && make'
+      \ 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
       \ }
 let g:CommandTMaxHeight = 10
 let g:CommandTMinHeight = 10
