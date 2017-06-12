@@ -9,10 +9,10 @@ if has("win32")
   if has("directx")
     set renderoptions=type:directx,level:1.0,geom:1,renmode:3,taamode:1
   endif
+elseif has("osx")
+  set guifont=Monaco:h14
 elseif has("unix")
   set guifont=Ubuntu\ Mono\ 14
-elseif has("osx")
-  set guifont=Menlo:h14
 endif
 
 set vb t_vb=
