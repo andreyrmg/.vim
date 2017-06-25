@@ -24,12 +24,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 
-Plug 'wincent/command-t', {
-      \ 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-      \ }
-let g:CommandTMaxHeight = 10
-let g:CommandTMinHeight = 10
-let g:CommandTFileScanner = 'find'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'cocopon/lightline-hybrid.vim'
