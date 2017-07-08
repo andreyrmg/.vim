@@ -183,16 +183,6 @@ nnoremap <d-9> :Gstatus<cr>
 nnoremap <m-9> :Gstatus<cr>
 " }}}
 
-" help functions {{{
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#cmd#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-" }}}
 " autocommands {{{
 if has("autocmd")
   augroup vimrc_general
