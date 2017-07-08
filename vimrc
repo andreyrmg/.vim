@@ -196,7 +196,6 @@ if has("autocmd")
 
   augroup vimrc_filetypes
     autocmd!
-    " autocmd FileType vim        setl foldmethod=marker
     autocmd FileType xml        setl sts=4 sw=4 et
     autocmd FileType java       setl sts=4 sw=4 et
     autocmd FileType javascript setl sts=4 sw=4 et
