@@ -100,7 +100,7 @@ colorscheme hybrid
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
-set softtabstop=2
+set softtabstop=-1
 set expandtab
 set autoindent
 set shiftround
