@@ -149,6 +149,9 @@ inoremap <f2> <esc>:w<cr>
 " disable Ex mode
 nnoremap Q gq
 
+" quick repeat last shell command
+nnoremap <leader>1 :!!<cr>
+
 " quick quit
 nnoremap <leader>q ZQ
 " quick command mode
