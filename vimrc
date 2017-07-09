@@ -141,9 +141,6 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<cr>
 
 nnoremap <silent> <leader>x :w<cr>:!chmod 755 %<cr>:e<cr>
 
-nnoremap <leader>sp :rightbelow split<space>
-nnoremap <leader>vs :rightbelow vsplit<space>
-
 " just save the current buffer
 nnoremap <f2> :w<cr>
 nnoremap <leader>w :w<cr>
