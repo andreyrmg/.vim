@@ -131,7 +131,6 @@ let mapleader=","
 let maplocalleader=","
 
 nnoremap <silent> <leader>cd :lcd %:h<cr>
-nnoremap <silent> <leader>md :!mkdir -p %:p:h<cr>
 
 nnoremap <silent> <leader>n :nohlsearch<cr>
 nnoremap <silent> <cr>      :nohlsearch<cr><cr>
@@ -139,7 +138,10 @@ nnoremap <silent> <cr>      :nohlsearch<cr><cr>
 nnoremap <silent> <leader>ev :e $MYVIMRC<cr>
 nnoremap <silent> <leader>sv :so $MYVIMRC<cr>
 
-nnoremap <silent> <leader>x :w<cr>:!chmod 755 %<cr>:e<cr>
+if has('unix')
+  nnoremap <silent> <leader>md :!mkdir -p %:p:h<cr>
+  nnoremap <silent> <leader>x :!chmod u+x %<cr>:e<cr>
+endif
 
 " just save the current buffer
 nnoremap <f2> :w<cr>
