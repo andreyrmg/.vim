@@ -65,7 +65,7 @@ set cpoptions+=$
 set encoding=utf-8
 set exrc
 set formatoptions-=t
-set formatoptions+=ajro
+set formatoptions+=ajnro
 set hidden
 set laststatus=2
 set list
