@@ -118,6 +118,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 " }}}
+" undo {{{
+let s:undodir = expand(s:dotvim . "/.udir")
+if !isdirectory(s:undodir)
+  call mkdir(s:undodir, 0700)
+endif
+execute "set undodir=" . s:undodir
+set undofile
+" }}}
 " input method {{{
 if has('osx')
   set keymap=russian-jcukenmac
