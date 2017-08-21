@@ -64,8 +64,7 @@ set colorcolumn=+1
 set cpoptions+=$
 set encoding=utf-8
 set exrc
-set formatoptions-=t
-set formatoptions+=ajnro
+set formatoptions+=jnro
 set hidden
 set laststatus=2
 set list
@@ -204,7 +203,6 @@ if has("autocmd")
   augroup vimrc_filetypes
     autocmd!
     autocmd FileType java,xml setlocal shiftwidth=4
-    autocmd FileType text setlocal formatoptions+=t
   augroup END
 
   " Hg
