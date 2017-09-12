@@ -13,7 +13,7 @@ elseif has("osx")
   set guifont=Fira\ Code:h14
   set macligatures
 elseif has("unix")
-  set guifont=Ubuntu\ Mono\ 14
+  set guifont=Fira\ Code\ Retina\ 12
 endif
 
 set vb t_vb=
