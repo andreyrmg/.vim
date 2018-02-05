@@ -86,7 +86,7 @@ set wildignore+=**/*.class
 set wildignore+=**/build/*
 set wildignore+=**/target/*
 set wildmenu
-set wildmode=list:longest
+set wildmode=full,full
 set winwidth=80
 
 let g:pascal_fpc = 1
