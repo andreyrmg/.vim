@@ -11,4 +11,6 @@ endfunction
 
 if filereadable(s:clang_format_py)
   autocmd BufWritePre <buffer> call <SID>FormatFile()
+
+  execute "nnoremap <buffer> <c-i> :py3f " . s:clang_format_py . "<cr>"
 endif
