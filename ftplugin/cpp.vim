@@ -1,5 +1,7 @@
 if has("osx")
   let s:clang_format_py = "/usr/local/opt/clang-format/share/clang/clang-format.py"
+elseif has("unix")
+  let s:clang_format_py = "/usr/share/clang/clang-format.py"
 else
   let s:clang_format_py = "clang-format.py"
 endif
