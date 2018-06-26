@@ -160,7 +160,8 @@ nnoremap <leader>w :w<cr>
 inoremap <f2> <c-o>:w<cr>
 
 " disable Ex mode
-nnoremap Q gq
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
 
 " quick repeat last shell command
 nnoremap <leader>1 :!!<cr>
