@@ -157,7 +157,7 @@ endif
 " just save the current buffer
 nnoremap <f2> :w<cr>
 nnoremap <leader>w :w<cr>
-inoremap <f2> <esc>:w<cr>
+inoremap <f2> <c-o>:w<cr>
 
 " disable Ex mode
 nnoremap Q gq
