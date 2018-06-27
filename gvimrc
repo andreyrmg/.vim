@@ -12,7 +12,7 @@ if has("win32")
 elseif has("osx")
   set guifont=Menlo:h14
 elseif has("unix")
-  set guifont=Ubuntu\ Mono\ 12
+  set guifont=Monospace\ 12
 endif
 
 set vb t_vb=
