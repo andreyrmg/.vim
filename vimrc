@@ -168,14 +168,6 @@ nnoremap <leader>q ZQ
 " quick command mode
 nnoremap ; :
 
-" stop using escape
-inoremap <esc> <nop>
-inoremap <c-c> <esc>
-vnoremap <esc> <nop>
-vnoremap <c-c> <esc>
-cnoremap <esc> <nop>
-cnoremap <c-c> <esc>
-
 function! s:CompleteOrInsertTab()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
