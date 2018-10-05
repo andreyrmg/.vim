@@ -181,6 +181,9 @@ endfunction
 inoremap <expr> <tab> <SID>CompleteOrInsertTab()
 inoremap <s-tab> <c-n>
 
+inoremap <c-j> <esc>
+vnoremap <c-j> <esc>
+
 " copy/paste to/from X clipboard
 nnoremap <leader>y "+y
 nnoremap <leader>yy "+yy
