@@ -15,7 +15,7 @@ endif
 
 call plug#begin(s:dotvim . '/plugged')
 
-Plug 'w0ng/vim-hybrid'
+Plug 'andreyrmg/vim-hybrid'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -98,7 +98,6 @@ set t_Co=256
 set t_ut=
 set background=dark
 colorscheme hybrid
-hi MatchParen ctermfg=60 ctermbg=234 guifg=#5F5F87 guibg=#1d1f21
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
