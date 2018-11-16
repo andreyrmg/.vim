@@ -10,7 +10,8 @@ if has("win32")
     set renderoptions=type:directx,level:1.0,geom:1,renmode:3,taamode:1
   endif
 elseif has("osx")
-  set guifont=Menlo:h14
+  set guifont=Iosevka:h18
+  set macligatures
 elseif has("unix")
   set guifont=Monospace\ 12
 endif
