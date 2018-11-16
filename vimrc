@@ -72,7 +72,9 @@ set listchars=tab:→\ ,trail:·
 set modeline
 set nowrap
 set noshowmode
+set number
 set path+=**
+set relativenumber
 set scrolloff=3
 set sidescroll=1
 set splitright
