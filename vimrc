@@ -77,6 +77,7 @@ set path+=**
 set relativenumber
 set scrolloff=3
 set sidescroll=1
+set signcolumn=yes
 set splitright
 set timeoutlen=1000
 set ttimeoutlen=0
