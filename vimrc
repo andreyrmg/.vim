@@ -21,7 +21,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
-Plug 'airblade/vim-rooter'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
