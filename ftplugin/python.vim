@@ -3,29 +3,6 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal expandtab
 
-augroup python
-  autocmd!
-  autocmd BufWritePost <buffer> call <SID>Flake8()
-augroup END
-
-function! s:Pep8()
-  lgetexpr system("pep8 --max-line-length=119 " . expand("%"))
-  if len(getloclist(0)) > 0
-    lopen
-  else
-    lclose
-  endif
-endfunction
-
-function! s:Flake8()
-  lgetexpr system("flake8 --max-line-length=119 " . expand("%"))
-  if len(getloclist(0)) > 0
-    lopen
-  else
-    lclose
-  endif
-endfunction
-
 function! AnalizeTracebackFromClipboard()
   let l:traces = []
   for item in split(@+, '\n')
