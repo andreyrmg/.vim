@@ -44,6 +44,21 @@ endfunction
 
 Plug 'dag/vim-fish'
 
+Plug 'rust-lang/rust.vim', {
+      \ 'for': 'rust'
+      \ }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', '', 'rls'],
+    \ }
+nnoremap <f5> :call LanguageClient_contextMenu()<cr>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<cr>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
+nnoremap <silent> <s-f6> :call LanguageClient#textDocument_rename()<cr>
+
 let s:custom_plugins_file = s:dotvim . '/' . 'plugins.vim'
 if filereadable(expand(s:custom_plugins_file))
   execute 'source' s:custom_plugins_file
