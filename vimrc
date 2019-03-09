@@ -49,7 +49,7 @@ Plug 'rust-lang/rust.vim', {
       \ }
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
+    \ 'do': has('win32') ? 'powershell -executionpolicy bypass -File install.ps1' : 'bash install.sh',
     \ }
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', '', 'rls'],
