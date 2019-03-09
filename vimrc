@@ -97,6 +97,7 @@ set splitright
 set timeoutlen=1000
 set ttimeoutlen=0
 set virtualedit=onemore
+set visualbell t_vb=
 set wildignore+=**/*.o
 set wildignore+=**/*.pyc
 set wildignore+=**/*.class

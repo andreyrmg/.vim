@@ -15,6 +15,3 @@ elseif has("osx")
 elseif has("unix")
   set guifont=Monospace\ 12
 endif
-
-set vb t_vb=
-
