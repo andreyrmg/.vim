@@ -16,6 +16,7 @@ endif
 call plug#begin(s:dotvim . '/plugged')
 
 Plug 'andreyrmg/vim-hybrid'
+Plug 'chriskempson/base16-vim'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -116,7 +117,7 @@ let g:rustfmt_autosave = 1
 set t_Co=256
 set t_ut=
 set background=dark
-colorscheme hybrid
+colorscheme base16-gruvbox-dark-hard
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
