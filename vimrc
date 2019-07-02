@@ -117,7 +117,10 @@ let g:rustfmt_autosave = 1
 set t_Co=256
 set t_ut=
 set background=dark
-colorscheme base16-gruvbox-dark-hard
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 " }}}
 " tabs and spaces {{{
 set shiftwidth=2
