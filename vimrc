@@ -113,6 +113,13 @@ let g:pascal_delphi = 1
 
 let g:rustfmt_autosave = 1
 
+let g:hs_highlight_delimiters = 1
+let g:hs_highlight_boolean = 1
+let g:hs_highlight_types = 1
+let g:hs_highlight_more_types = 1
+let g:hs_highlight_debug = 1
+let g:hs_allow_hash_operator = 1
+
 " color scheme {{{
 set t_Co=256
 set t_ut=
