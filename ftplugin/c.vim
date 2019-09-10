@@ -4,9 +4,9 @@ function! s:FormatFile()
 endfunction
 
 let s:clang_format_py_paths = [
-      \ "/usr/lib/llvm/6/share/clang/clang-format.py",
-      \ "/usr/local/opt/clang-format/share/clang/clang-format.py",
       \ "/usr/lib/llvm/8/share/clang/clang-format.py",
+      \ "/usr/lib/llvm/7/share/clang/clang-format.py",
+      \ "/usr/local/opt/clang-format/share/clang/clang-format.py",
       \ "/usr/share/clang/clang-format.py",
       \ ]
 for path in s:clang_format_py_paths
