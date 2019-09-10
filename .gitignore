@@ -7,3 +7,5 @@ plugins.vim
 
 *.py[cod]
 view/
+
+spell/*.add.spl
