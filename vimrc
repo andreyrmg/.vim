@@ -127,6 +127,8 @@ set background=dark
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
+else
+  colorscheme base16-gruvbox-dark-hard
 endif
 " }}}
 " tabs and spaces {{{
