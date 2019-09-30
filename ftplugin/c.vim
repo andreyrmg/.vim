@@ -1,3 +1,5 @@
+setlocal commentstring=//%s
+
 function! s:FormatFile()
   let l:lines = "all"
   execute 'py3f' s:clang_format_py
