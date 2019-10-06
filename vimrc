@@ -60,6 +60,9 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<cr>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
 nnoremap <silent> <s-f6> :call LanguageClient#textDocument_rename()<cr>
 
+Plug 'qpkorr/vim-bufkill'
+let g:BufKillOverrideCtrlCaret = 1
+
 let s:custom_plugins_file = s:dotvim . '/' . 'plugins.vim'
 if filereadable(expand(s:custom_plugins_file))
   execute 'source' s:custom_plugins_file
