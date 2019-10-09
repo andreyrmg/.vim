@@ -91,6 +91,7 @@ set listchars=tab:→\ ,trail:·
 set modeline
 set nowrap
 set noshowmode
+set nostartofline
 set number
 set path+=**
 set relativenumber
