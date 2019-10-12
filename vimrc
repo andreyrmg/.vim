@@ -63,6 +63,11 @@ nnoremap <silent> <s-f6> :call LanguageClient#textDocument_rename()<cr>
 Plug 'qpkorr/vim-bufkill'
 let g:BufKillOverrideCtrlCaret = 1
 
+Plug 'airblade/vim-rooter'
+let g:rooter_use_lcd = 1
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+
 let s:custom_plugins_file = s:dotvim . '/' . 'plugins.vim'
 if filereadable(expand(s:custom_plugins_file))
   execute 'source' s:custom_plugins_file
