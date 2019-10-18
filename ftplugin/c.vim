@@ -22,3 +22,5 @@ if filereadable(s:clang_format_py)
 
   execute "nnoremap <buffer> <c-i> :py3f " . s:clang_format_py . "<cr>"
 endif
+
+inoremap <buffer> {<cr> {<cr>}<c-o>O
