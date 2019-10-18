@@ -245,7 +245,7 @@ nnoremap <m-9> :Gstatus<cr>
 
 " fzf
 command! -bang -nargs=? -complete=dir
-  \ Files call fzf#vim#files(<q-args>, {'source': 'rg --files'}, <bang>0)
+  \ Files call fzf#vim#files(<q-args>, {'source': 'fd'}, <bang>0)
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>b :Buffers<cr>
 " }}}
