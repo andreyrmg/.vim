@@ -237,6 +237,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" exit from terminal
+tnoremap <c-j> <c-\><c-n>
+
 " quick make
 nnoremap M :silent make\|redraw!\|cl<cr>
 
