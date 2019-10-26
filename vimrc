@@ -243,8 +243,8 @@ nnoremap M :silent make\|redraw!\|cl<cr>
 " fzf
 command! -bang -nargs=? -complete=dir
   \ Files call fzf#vim#files(<q-args>, {'source': 'fd'}, <bang>0)
-nnoremap <c-p> :Files<cr>
-nnoremap <leader>b :Buffers<cr>
+nnoremap <c-n> :Files<cr>
+nnoremap <c-e> :Buffers<cr>
 " }}}
 
 " autocommands {{{
