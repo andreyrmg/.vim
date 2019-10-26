@@ -240,9 +240,6 @@ nnoremap <c-l> <c-w>l
 " quick make
 nnoremap M :silent make\|redraw!\|cl<cr>
 
-nnoremap <d-9> :Gstatus<cr>
-nnoremap <m-9> :Gstatus<cr>
-
 " fzf
 command! -bang -nargs=? -complete=dir
   \ Files call fzf#vim#files(<q-args>, {'source': 'fd'}, <bang>0)
