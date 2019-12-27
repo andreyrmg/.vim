@@ -238,7 +238,8 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 " exit from terminal
-tnoremap <c-j> <c-\><c-n>
+tnoremap <expr> <esc> &filetype == "fzf" ? "<esc>" : "<c-\><c-n>"
+tnoremap <expr> <c-j> &filetype == "fzf" ? "<c-j>" : "<c-\><c-n>"
 
 " quick make
 nnoremap M :silent make\|redraw!\|cl<cr>
