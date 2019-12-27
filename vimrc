@@ -256,9 +256,9 @@ if has("autocmd")
   augroup vimrc_general
     autocmd!
     autocmd BufReadPost *
-          \ if line("'\"") > 1 && line("'\"") <= line("$") |
-          \   execute "normal! g`\"" |
-          \ endif
+      \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+      \ |   exe "normal! g`\""
+      \ | endif
     autocmd BufWritePre * :%s/\s\+$//e
   augroup END
 
