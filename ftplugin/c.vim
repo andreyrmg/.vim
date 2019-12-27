@@ -17,7 +17,7 @@ for path in s:clang_format_py_paths
   endif
 endfor
 
-if filereadable(s:clang_format_py)
+if filereadable(s:clang_format_py) && filereadable(".clang-format")
   autocmd BufWritePre <buffer> call <SID>FormatFile()
 
   execute "nnoremap <buffer> <c-i> :py3f " . s:clang_format_py . "<cr>"
