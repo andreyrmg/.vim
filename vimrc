@@ -48,6 +48,8 @@ Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim', {
       \ 'for': 'rust'
       \ }
+let g:rustfmt_autosave = 1
+
 Plug 'neoclide/coc.nvim', {
       \ 'for': 'rust',
       \ 'branch': 'release'
@@ -113,8 +115,6 @@ set winwidth=80
 
 let g:pascal_fpc = 1
 let g:pascal_delphi = 1
-
-let g:rustfmt_autosave = 1
 
 let g:hs_highlight_delimiters = 1
 let g:hs_highlight_boolean = 1
