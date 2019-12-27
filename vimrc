@@ -48,17 +48,11 @@ Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim', {
       \ 'for': 'rust'
       \ }
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': has('win32') ? 'powershell -executionpolicy bypass -File install.ps1' : 'bash install.sh',
-    \ }
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', '', 'rls'],
-    \ }
-nnoremap <f5> :call LanguageClient_contextMenu()<cr>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<cr>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
-nnoremap <silent> <s-f6> :call LanguageClient#textDocument_rename()<cr>
+Plug 'neoclide/coc.nvim', {
+      \ 'for': 'rust',
+      \ 'branch': 'release'
+      \ }
+autocmd! User coc.nvim call <SID>CocSetup()
 
 Plug 'qpkorr/vim-bufkill'
 let g:BufKillOverrideCtrlCaret = 1
@@ -209,17 +203,6 @@ nnoremap <leader>q ZQ
 " quick command mode
 nnoremap ; :
 
-function! s:CompleteOrInsertTab()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <expr> <tab> <SID>CompleteOrInsertTab()
-inoremap <s-tab> <c-n>
-
 inoremap <c-j> <esc>
 vnoremap <c-j> <esc>
 
@@ -282,4 +265,57 @@ if has("win32")
   set fencs+=cp1251
   language ctype Russian_Russia.1251
 endif
+" }}}
+" plugins setup {{{
+function! s:CocSetup()
+  inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+
+  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
+
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+
+  nmap <leader>rn <Plug>(coc-rename)
+
+  xmap <leader>f  <Plug>(coc-format-selected)
+  nmap <leader>f  <Plug>(coc-format-selected)
+
+  xmap <leader>a  <Plug>(coc-codeaction-selected)
+  nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+  nmap <leader>ac  <Plug>(coc-codeaction)
+  nmap <leader>qf  <Plug>(coc-fix-current)
+
+  xmap if <Plug>(coc-funcobj-i)
+  xmap af <Plug>(coc-funcobj-a)
+  omap if <Plug>(coc-funcobj-i)
+  omap af <Plug>(coc-funcobj-a)
+endfunction
 " }}}

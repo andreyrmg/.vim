@@ -9,3 +9,5 @@ plugins.vim
 view/
 
 spell/*.add.spl
+
+coc-settings.json
