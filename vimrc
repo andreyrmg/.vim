@@ -206,13 +206,16 @@ nnoremap ; :
 inoremap <c-j> <esc>
 vnoremap <c-j> <esc>
 
-" copy/paste to/from X clipboard
+" copy/paste to/from Gnome clipboard
 nnoremap <leader>y "+y
 nnoremap <leader>yy "+yy
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
+
+" copy filename to Gnome clipboard
+nnoremap <leader>cl :let @+=expand("%:p")<cr>
 
 " go to another window
 nnoremap <c-h> <c-w>h
